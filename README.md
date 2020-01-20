@@ -8,7 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Structure and practice for handling recurring jobs using npm glob package
+
+## [2.0.0] - 2020-01-20
+
+### Added
+
+- Structure and practice for handling recurring jobs using npm glob package.
+- Use database connection as promise which must resolve before app routes and other config can be completed.
+- Use glob to handle initialization of all models so we can use database transactions.
 
 ## [1.0.0] - 2019-04-15
 

@@ -6,17 +6,18 @@ const options = {
   useCreateIndex: true,
 };
 
-const connect = () => mongoose.connect(
+const connect = () => new Promise((resolve, reject) => mongoose.connect(
   process.env.MONGO_URI,
   options,
   (err) => {
     if (err) {
       // console.log(err);
-      throw err;
+      reject(err);
     }
     console.log('db connected.');
+    resolve('db connected.');
   },
-);
+));
 
 mongoose.connection
   .on('error', console.log)
